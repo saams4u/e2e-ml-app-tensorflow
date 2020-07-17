@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "text_classification/train.py", line 154, in <module>
+    config.logger.info(json.dumps(args.__dict__, indent=4))
+AttributeError: logger

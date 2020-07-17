@@ -13,6 +13,7 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from text_classification import config, data, models, utils
 
+import tensorflow as tf
 from tensorflow.keras.preprocessing.text import tokenizer_from_json
 
 

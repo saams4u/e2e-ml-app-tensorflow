@@ -32,7 +32,8 @@ from text_classification import config, data, models, utils
 import wandb
 from wandb.keras import WandbCallback
 
-wandb.init(project="e2e-ml-app-tensorflow", sync_tensorboard=False)
+wandb.init(project="e2e-ml-app-tensorflow", entity="mahjouri-saamahn", 
+           sync_tensorboard=True)
 
 
 def plot_confusion_matrix(y_pred, y_target, classes, fp, cmap=plt.cm.Blues):
@@ -284,6 +285,8 @@ if __name__ == '__main__':
     training_history = model.fit(
         x=training_generator, epochs=args.num_epochs, validation_data=validation_generator,
         callbacks=callbacks, shuffle=False, class_weight=class_weights, verbose=1)
+
+    model.save_weights('models/best_model.h5')
 
     # Evaluation
     test_history = model.evaluate(x=testing_generator, return_dict=True)

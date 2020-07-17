@@ -5,11 +5,13 @@ sys.path.append(".")
 
 from datetime import datetime
 from functools import wraps
+
 from http import HTTPStatus
 from io import BytesIO
 
 import json
 import numpy as np
+
 import shutil
 import ssl
 
@@ -72,7 +74,7 @@ def construct_response(f):
 def load_glove_embeddings(embeddings_file):
     """Load embeddings from a file."""
     embeddings = {}
-    with open(embeddings_file, "r") as fp:
+    with open(embeddings_file, "r", encoding="utf8") as fp:
         for index, line in enumerate(fp):
             values = line.split()
             word = values[0]

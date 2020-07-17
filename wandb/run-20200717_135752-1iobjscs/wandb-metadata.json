@@ -1,0 +1,31 @@
+{
+    "root": "C:/Users/mahjo/e2e-ml-app-tensorflow",
+    "program": "text_classification/train.py",
+    "git": {
+        "remote": "https://github.com/saams4u/e2e-ml-app-tensorflow.git",
+        "commit": "bf9bf78af8342ddc45a3802e97437daeee24dce1"
+    },
+    "email": "mahjouri.saamahn@gmail.com",
+    "startedAt": "2020-07-17T18:57:52.317411",
+    "host": "MSI",
+    "username": "mahjo",
+    "executable": "C:\\Users\\mahjo\\e2e-ml-app-tensorflow\\venv\\Scripts\\python.exe",
+    "os": "Windows-10-10.0.18362-SP0",
+    "python": "3.7.6",
+    "gpu": "GeForce GTX 1060",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "args": [
+        "--data-url",
+        "https://raw.githubusercontent.com/madewithml/lessons/master/data/news.csv",
+        "--lower",
+        "--shuffle",
+        "--use-glove"
+    ],
+    "state": "failed",
+    "jobType": null,
+    "mode": "run",
+    "project": "e2e-ml-app-tensorflow",
+    "heartbeatAt": "2020-07-17T18:58:07.585608",
+    "exitcode": 1
+}

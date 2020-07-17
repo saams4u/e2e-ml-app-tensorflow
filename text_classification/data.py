@@ -27,7 +27,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 def load_data(url, data_size):
 	"""Load dataset from URL."""
 	df = pd.read_csv(url)
-	df = df.sample(frac=1).reset_index(drop=True) # shuffle
+	df = df.sample(frac=0.9).reset_index(drop=True) # shuffle
 
 	# Reduce dataset
 	# You should always overfit your models on a small

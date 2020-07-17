@@ -1,0 +1,148 @@
+
+2020-07-17 13:48:42,819:INFO:train.py:<module>:147:
+{
+    "cuda": false,
+    "seed": 1234,
+    "shuffle": true,
+    "data_url": "https://raw.githubusercontent.com/madewithml/lessons/master/data/news.csv",
+    "lower": true,
+    "char_level": false,
+    "filters": "[!\\\"'#$%&()*\\+,-./:;<=>?@\\\\\\[\\]^_`{|}~]",
+    "data_size": 1.0,
+    "train_size": 0.7,
+    "val_size": 0.15,
+    "test_size": 0.15,
+    "num_epochs": 10,
+    "batch_size": 16,
+    "embedding_dim": 100,
+    "use_glove": true,
+    "freeze_embeddings": false,
+    "filter_sizes": [
+        2,
+        3,
+        4
+    ],
+    "num_filters": 50,
+    "hidden_dim": 128,
+    "dropout_p": 0.1,
+    "learning_rate": 0.0001,
+    "patience": 3
+}
+
+2020-07-17 13:48:43,773:INFO:train.py:<module>:159:
+Raw data:
+  Sharon Accepts Plan to Reduce Gaza Army Operation, Haaretz Says World
+
+2020-07-17 13:48:44,579:INFO:train.py:<module>:166:
+Preprocessed data:
+  Sharon Accepts Plan to Reduce Gaza Army Operation, Haaretz Says → Sharon Accepts Plan to Reduce Gaza Army Operation , Haaretz Says
+
+2020-07-17 13:48:44,790:INFO:train.py:<module>:173:
+Data splits:
+	X_train: 86700, y_train: 86700
+	X_val: 15300, y_val: 15300
+	X_test: 18000, y_test: 18000
+
+2020-07-17 13:48:45,687:INFO:train.py:<module>:184:
+vocab_size: 29794
+text_classification/train.py:188: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  X_train = np.array(X_tokenizer.texts_to_sequences(X_train))
+text_classification/train.py:189: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  X_val = np.array(X_tokenizer.texts_to_sequences(X_val))
+text_classification/train.py:190: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  X_test = np.array(X_tokenizer.texts_to_sequences(X_test))
+
+2020-07-17 13:48:46,844:INFO:train.py:<module>:193:
+Text to indices:
+  (raw) Fed , Corporate Forecasts to Set Tone
+  (preprocessed) fed corporate forecasts to set tone
+  (tokenized) [374, 1266, 1419, 2, 70, 4780]
+
+2020-07-17 13:48:46,849:INFO:train.py:<module>:203:
+classes:
+  ['Business' 'Sci/Tech' 'Sports' 'World']
+
+2020-07-17 13:48:46,870:INFO:train.py:<module>:212:
+Labels to indices:
+  Business → 0
+
+2020-07-17 13:48:46,871:INFO:train.py:<module>:219:
+class counts:
+  [21675 21675 21675 21675]
+class weights:
+  {0: 4.61361014994233e-05, 1: 4.61361014994233e-05, 2: 4.61361014994233e-05, 3: 4.61361014994233e-05}
+
+2020-07-17 13:48:46,875:INFO:train.py:<module>:236:
+Dataset generators:
+  (training_generator) <DataGenerator(batch_size=16, batches=5419, shuffle=False)>
+  (validation_generator) <DataGenerator(batch_size=16, batches=957, shuffle=False)>
+  (testing_generator) <DataGenerator(batch_size=16, batches=1125, shuffle=False)>
+Sample batch:
+  X: (16, 8)
+  y: (16,)
+
+
+2020-07-17 13:48:58,711:INFO:train.py:<module>:258:
+GloVe Embeddings:
+(29794, 100)
+Traceback (most recent call last):
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\ops\gen_nn_ops.py", line 926, in conv2d
+    "dilations", dilations)
+tensorflow.python.eager.core._FallbackException: Expecting int64_t value for attr strides, got numpy.int32
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "text_classification/train.py", line 288, in <module>
+    callbacks=callbacks, shuffle=False, class_weight=class_weights, verbose=1)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\wandb\keras\__init__.py", line 120, in new_v2
+    return old_v2(*args, **kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\keras\engine\training.py", line 66, in _method_wrapper
+    return method(self, *args, **kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\keras\engine\training.py", line 815, in fit
+    model=self)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 1112, in __init__
+    model=model)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 908, in __init__
+    **kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 781, in __init__
+    lambda x: model(x, training=False), args=(concrete_x,))
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 951, in run
+    return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 2290, in call_for_each_replica
+    return self._call_for_each_replica(fn, args, kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 2649, in _call_for_each_replica
+    return fn(*args, **kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 282, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 781, in <lambda>
+    lambda x: model(x, training=False), args=(concrete_x,))
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\keras\engine\base_layer.py", line 968, in __call__
+    outputs = self.call(cast_inputs, *args, **kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\text_classification\models.py", line 52, in call
+    z = self.convs[i](x_embed)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\keras\engine\base_layer.py", line 968, in __call__
+    outputs = self.call(cast_inputs, *args, **kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\keras\layers\convolutional.py", line 207, in call
+    outputs = self._convolution_op(inputs, self.kernel)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\ops\nn_ops.py", line 1106, in __call__
+    return self.conv_op(inp, filter)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\ops\nn_ops.py", line 638, in __call__
+    return self.call(inp, filter)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\ops\nn_ops.py", line 237, in __call__
+    name=self.name)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\ops\nn_ops.py", line 226, in _conv1d
+    name=name)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\util\deprecation.py", line 574, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\util\deprecation.py", line 574, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\ops\nn_ops.py", line 1663, in conv1d
+    name=name)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\ops\gen_nn_ops.py", line 933, in conv2d
+    data_format=data_format, dilations=dilations, name=name, ctx=_ctx)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\ops\gen_nn_ops.py", line 1022, in conv2d_eager_fallback
+    ctx=ctx, name=name)
+  File "C:\Users\mahjo\e2e-ml-app-tensorflow\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.UnknownError: Failed to get convolution algorithm. This is probably because cuDNN failed to initialize, so try looking to see if a warning log message was printed above. [Op:Conv2D]
