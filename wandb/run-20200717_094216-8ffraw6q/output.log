@@ -1,0 +1,130 @@
+
+2020-07-17 09:42:18,979:INFO:train.py:<module>:145:
+{
+    "cuda": false,
+    "seed": 1234,
+    "shuffle": true,
+    "data_url": "https://raw.githubusercontent.com/madewithml/lessons/master/data/news.csv",
+    "lower": true,
+    "char_level": false,
+    "filters": "[!\\\"'#$%&()*\\+,-./:;<=>?@\\\\\\[\\]^_`{|}~]",
+    "data_size": 1.0,
+    "train_size": 0.7,
+    "val_size": 0.15,
+    "test_size": 0.15,
+    "num_epochs": 10,
+    "batch_size": 64,
+    "embedding_dim": 100,
+    "use_glove": true,
+    "freeze_embeddings": false,
+    "filter_sizes": [
+        2,
+        3,
+        4
+    ],
+    "num_filters": 50,
+    "hidden_dim": 128,
+    "dropout_p": 0.1,
+    "learning_rate": 0.0001,
+    "patience": 3
+}
+
+2020-07-17 09:42:19,702:INFO:train.py:<module>:156:
+Raw data:
+  Sharon Accepts Plan to Reduce Gaza Army Operation, Haaretz Says World
+
+2020-07-17 09:42:20,923:INFO:train.py:<module>:163:
+Preprocessed data:
+  Sharon Accepts Plan to Reduce Gaza Army Operation, Haaretz Says → Sharon Accepts Plan to Reduce Gaza Army Operation , Haaretz Says
+
+2020-07-17 09:42:21,305:INFO:train.py:<module>:170:
+Data splits:
+	X_train: 86700, y_train: 86700
+	X_val: 15300, y_val: 15300
+	X_test: 18000, y_test: 18000
+
+2020-07-17 09:42:23,303:INFO:train.py:<module>:182:
+vocab_size: 29794
+
+2020-07-17 09:42:26,442:INFO:train.py:<module>:190:
+Text to indices:
+  (raw) Fed , Corporate Forecasts to Set Tone
+  (preprocessed) fed corporate forecasts to set tone
+  (tokenized) [374, 1266, 1419, 2, 70, 4780]
+
+2020-07-17 09:42:26,452:INFO:train.py:<module>:200:
+classes:
+  ['Business' 'Sci/Tech' 'Sports' 'World']
+
+2020-07-17 09:42:26,503:INFO:train.py:<module>:209:
+Labels to indices:
+  Business → 0
+
+2020-07-17 09:42:26,511:INFO:train.py:<module>:216:
+class counts:
+  [21675 21675 21675 21675]
+class weights:
+  {0: 4.61361014994233e-05, 1: 4.61361014994233e-05, 2: 4.61361014994233e-05, 3: 4.61361014994233e-05}
+
+2020-07-17 09:42:26,513:INFO:train.py:<module>:233:
+Dataset generators:
+  (training_generator) <DataGenerator(batch_size=64, batches=1355, shuffle=False)>
+  (validation_generator) <DataGenerator(batch_size=64, batches=240, shuffle=False)>
+  (testing_generator) <DataGenerator(batch_size=64, batches=282, shuffle=False)>
+Sample batch:
+  X: (64, 13)
+  y: (64,)
+
+
+2020-07-17 09:42:45,108:INFO:train.py:<module>:255:
+GloVe Embeddings:
+(29794, 100)
+2020-07-17 09:42:45.261083: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2020-07-17 09:42:45.303229: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 1599995000 Hz
+2020-07-17 09:42:45.304970: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3c5a450 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-07-17 09:42:45.305538: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-07-17 09:42:45.320712: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 11917600 exceeds 10% of free system memory.
+2020-07-17 09:42:45.433918: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 11917600 exceeds 10% of free system memory.
+2020-07-17 09:42:45.460541: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 11917600 exceeds 10% of free system memory.
+2020-07-17 09:42:45.717826: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 11917600 exceeds 10% of free system memory.
+Epoch 1/10
+Traceback (most recent call last):
+  File "text_classification/train.py", line 284, in <module>
+    training_history = model.fit(
+  File "/home/saams4u/.local/lib/python3.8/site-packages/wandb/keras/__init__.py", line 120, in new_v2
+    return old_v2(*args, **kwargs)
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 66, in _method_wrapper
+    return method(self, *args, **kwargs)
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 848, in fit
+    tmp_logs = train_function(iterator)
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 580, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 627, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 505, in _initialize
+    self._stateful_fn._get_concrete_function_internal_garbage_collected(  # pylint: disable=protected-access
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 2446, in _get_concrete_function_internal_garbage_collected
+    graph_function, _, _ = self._maybe_define_function(args, kwargs)
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 2777, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 2657, in _create_graph_function
+    func_graph_module.func_graph_from_py_func(
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/framework/func_graph.py", line 981, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 441, in wrapped_fn
+    return weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/framework/func_graph.py", line 968, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+AttributeError: in user code:
+
+    /home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py:571 train_function  *
+        outputs = self.distribute_strategy.run(
+    ./text_classification/models.py:82 train_step  *
+        self.optimizer.apply_gradient(zip(grads, self.trainable_weights))
+    /home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py:678 __getattribute__
+        raise e
+    /home/saams4u/.local/lib/python3.8/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py:668 __getattribute__
+        return super(OptimizerV2, self).__getattribute__(name)
+
+    AttributeError: 'Adam' object has no attribute 'apply_gradient'
+

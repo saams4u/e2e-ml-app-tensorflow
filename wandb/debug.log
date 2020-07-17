@@ -1,0 +1,40 @@
+2020-07-17 09:42:18,424 DEBUG   MainThread:32861 [wandb_config.py:_load_defaults():154] no defaults not found in config-defaults.yaml
+2020-07-17 09:42:18,587 DEBUG   MainThread:32861 [git_repo.py:repo():30] git repository is invalid
+2020-07-17 09:42:18,611 DEBUG   MainThread:32861 [run_manager.py:__init__():547] Initialized sync for e2e-ml-app-tensorflow/8ffraw6q
+2020-07-17 09:42:18,620 INFO    MainThread:32861 [run_manager.py:wrap_existing_process():1149] wrapping existing process 32849
+2020-07-17 09:42:18,620 WARNING MainThread:32861 [io_wrap.py:register():108] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2020-07-17 09:42:18,785 INFO    MainThread:32861 [run_manager.py:init_run():928] system metrics and metadata threads started
+2020-07-17 09:42:18,785 INFO    MainThread:32861 [run_manager.py:init_run():967] upserting run before process can begin, waiting at most 10 seconds
+2020-07-17 09:42:18,955 INFO    Thread-15 :32861 [run_manager.py:_upsert_run():1056] saving pip packages
+2020-07-17 09:42:18,956 INFO    Thread-15 :32861 [run_manager.py:_upsert_run():1058] initializing streaming files api
+2020-07-17 09:42:18,956 INFO    Thread-15 :32861 [run_manager.py:_upsert_run():1065] unblocking file change observer, beginning sync with W&B servers
+2020-07-17 09:42:18,957 INFO    MainThread:32861 [run_manager.py:wrap_existing_process():1166] informing user process we are ready to proceed
+2020-07-17 09:42:18,975 INFO    MainThread:32861 [run_manager.py:_sync_etc():1298] entering loop for messages from user process
+2020-07-17 09:42:19,588 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/wandb-history.jsonl
+2020-07-17 09:42:19,593 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/config.yaml
+2020-07-17 09:42:19,795 INFO    Thread-4  :32861 [run_manager.py:_on_file_created():681] file/dir created: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/wandb-summary.json
+2020-07-17 09:42:19,797 INFO    Thread-4  :32861 [run_manager.py:_on_file_created():681] file/dir created: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/output.log
+2020-07-17 09:42:19,799 INFO    Thread-4  :32861 [run_manager.py:_on_file_created():681] file/dir created: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/requirements.txt
+2020-07-17 09:42:19,799 INFO    Thread-4  :32861 [run_manager.py:_on_file_created():681] file/dir created: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/wandb-metadata.json
+2020-07-17 09:42:20,588 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/output.log
+2020-07-17 09:42:21,588 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/output.log
+2020-07-17 09:42:23,591 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/output.log
+2020-07-17 09:42:26,596 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/output.log
+2020-07-17 09:42:35,610 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/wandb-metadata.json
+2020-07-17 09:42:45,622 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/output.log
+2020-07-17 09:42:45,758 INFO    MainThread:32861 [run_manager.py:_sync_etc():1321] received message from user process: {"save_policy": {"glob": "model-best.h5", "policy": "live"}}
+2020-07-17 09:42:46,624 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/output.log
+2020-07-17 09:42:47,076 INFO    MainThread:32861 [run_manager.py:_sync_etc():1321] received message from user process: {"exitcode": 1}
+2020-07-17 09:42:47,078 INFO    MainThread:32861 [run_manager.py:_sync_etc():1408] closing log streams and sending exitcode to W&B
+2020-07-17 09:42:47,079 INFO    MainThread:32861 [run_manager.py:shutdown():1072] shutting down system stats and metadata service
+2020-07-17 09:42:47,625 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/output.log
+2020-07-17 09:42:47,626 INFO    Thread-4  :32861 [run_manager.py:_on_file_created():681] file/dir created: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/wandb-events.jsonl
+2020-07-17 09:42:47,815 INFO    MainThread:32861 [run_manager.py:shutdown():1086] stopping streaming files and file change observer
+2020-07-17 09:42:48,627 INFO    Thread-4  :32861 [run_manager.py:_on_file_modified():692] file/dir modified: /home/saams4u/e2e-ml-app-tensorflow/wandb/run-20200717_094216-8ffraw6q/wandb-metadata.json
+2020-07-17 09:42:49,757 INFO    MainThread:32861 [run_manager.py:_sync_etc():1427] rendering summary
+2020-07-17 09:42:49,758 INFO    MainThread:32861 [run_manager.py:_sync_etc():1459] syncing files to cloud storage
+2020-07-17 09:42:50,012 INFO    MainThread:32861 [run_manager.py:_sync_etc():1468] syncing complete: https://app.wandb.ai/mahjouri-saamahn/e2e-ml-app-tensorflow/runs/8ffraw6q
+a.json
+2020-07-17 09:42:49,757 INFO    MainThread:32861 [8ffraw6q:run_manager.py:_sync_etc():1427] rendering summary
+2020-07-17 09:42:49,758 INFO    MainThread:32861 [8ffraw6q:run_manager.py:_sync_etc():1459] syncing files to cloud storage
+2020-07-17 09:42:50,012 INFO    MainThread:32861 [8ffraw6q:run_manager.py:_sync_etc():1468] syncing complete: https://app.wandb.ai/mahjouri-saamahn/e2e-ml-app-tensorflow/runs/8ffraw6q
