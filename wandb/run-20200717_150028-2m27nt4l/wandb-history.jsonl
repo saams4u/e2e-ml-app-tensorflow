@@ -1,2 +1,0 @@
-{"run_dir": "C:\\Users\\mahjo\\e2e-ml-app-tensorflow\\wandb\\run-20200717_150028-2m27nt4l", "_runtime": 12.781995058059692, "_timestamp": 1595016041.0135577, "_step": 0}
-{"epoch": 0, "loss": 0.5028481483459473, "accuracy": 0.7646802663803101, "val_loss": 0.38922882080078125, "val_accuracy": 0.8262163996696472, "lr": 9.999999747378752e-05, "_runtime": 70.78299760818481, "_timestamp": 1595016099.0145602, "_step": 1}

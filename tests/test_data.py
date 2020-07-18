@@ -5,8 +5,7 @@ sys.path.append(".")
 import numpy as np
 import pytest
 
-import tensorflow as tf
-from tf.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 
 @pytest.mark.parametrize('sequences, padded_sequences', [

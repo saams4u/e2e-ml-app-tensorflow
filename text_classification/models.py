@@ -1,13 +1,8 @@
 import tensorflow as tf
 from tensorflow import keras
 
-from tensorflow.keras.layers import Concatenate
-from tensorflow.keras.layers import Conv1D
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Dropout
-from tensorflow.keras.layers import Embedding
-from tensorflow.keras.layers import GlobalMaxPool1D
-from tensorflow.keras.layers import Input
+from tensorflow.keras.layers import Concatenate, Conv1D, Dense, Dropout, Embedding, GlobalMaxPool1D, Input
+
 from tensorflow.keras.losses import SparseCategoricalCrossentropy
 from tensorflow.keras.metrics import SparseCategoricalAccuracy
 from tensorflow.keras.models import Model
@@ -118,7 +113,6 @@ class ConvOutputsModel(Model):
 
     def call(self, x_in, training=False):
         """Forward pass."""
-
         # Embed
         x_emb = self.embedding(x_in)
 

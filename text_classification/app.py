@@ -17,7 +17,7 @@ from text_classification import config, data, predict, utils
 
 app = FastAPI(
     title="text-classification",
-    description="",
+    description="modified version of madewithml template",
     version="1.0.0",
 )
 
