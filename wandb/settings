@@ -1,2 +1,4 @@
 [default]
+project = e2e-ml-app-tensorflow
+entity = mahjouri-saamahn
 

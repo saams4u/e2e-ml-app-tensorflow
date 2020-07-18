@@ -32,7 +32,7 @@ from text_classification import config, data, models, utils
 import wandb
 from wandb.keras import WandbCallback
 
-wandb.init(project="e2e-ml-app-tensorflow", entity="mahjouri-saamahn", 
+wandb.init(project="mwml-app-tensorflow", entity="mahjouri-saamahn", 
            sync_tensorboard=True)
 
 

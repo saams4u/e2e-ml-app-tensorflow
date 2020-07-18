@@ -41,7 +41,6 @@ class TextCNN(keras.Model):
 
     def call(self, x_in, training=False):
         """Forward pass."""
-
         # Embed
         x_emb = self.embedding(x_in)
 

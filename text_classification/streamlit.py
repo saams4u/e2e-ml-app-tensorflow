@@ -29,7 +29,7 @@ st.write("""[<img src="https://github.com/madewithml/images/blob/master/images/y
 st.write("Video lesson coming soon...")
 
 # Get best run
-project = 'saams4u/e2e-ml-app-tensorflow'
+project = 'mahjouri-saamahn/mwml-app-tensorflow'
 best_run = utils.get_best_run(project=project,
                               metric="test_loss", objective="minimize")
 

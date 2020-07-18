@@ -22,7 +22,7 @@ app = FastAPI(
 )
 
 # Get best run
-best_run = utils.get_best_run(project="saams4u/e2e-ml-app-tensorflow",
+best_run = utils.get_best_run(project="mahjouri-saamahn/mwml-app-tensorflow",
                               metric="test_loss", objective="minimize")
 
 # Load best run (if needed)
