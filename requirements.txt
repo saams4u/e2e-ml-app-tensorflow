@@ -8,4 +8,4 @@ streamlit==0.60.0
 tensorflow-cpu==2.2.0
 tqdm==4.43.0
 uvicorn==0.11.3
-wandb==0.8.34
+wandb==0.8.0

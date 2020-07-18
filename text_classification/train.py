@@ -32,9 +32,8 @@ from text_classification import config, data, models, utils
 import wandb
 from wandb.keras import WandbCallback
 
-wandb.init(project="mwml-app-tensorflow", entity="mahjouri-saamahn", 
-           sync_tensorboard=True)
-
+wandb.init(project="mwml-app-tensorflow", entity="mahjouri-saamahn")
+           
 
 def plot_confusion_matrix(y_pred, y_target, classes, fp, cmap=plt.cm.Blues):
     """Plot a confusion matrix using ground truth and predictions."""

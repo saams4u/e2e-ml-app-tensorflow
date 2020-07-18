@@ -30,8 +30,7 @@ st.write("Video lesson coming soon...")
 
 # Get best run
 project = 'mahjouri-saamahn/mwml-app-tensorflow'
-best_run = utils.get_best_run(project=project,
-                              metric="test_loss", objective="minimize")
+best_run = utils.get_best_run(project=project, metric="test_loss", objective="minimize")
 
 # Load best run (if needed)
 best_run_dir = utils.load_run(run=best_run)

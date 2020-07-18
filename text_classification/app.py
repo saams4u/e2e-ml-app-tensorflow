@@ -22,8 +22,7 @@ app = FastAPI(
 )
 
 # Get best run
-best_run = utils.get_best_run(project="mahjouri-saamahn/mwml-app-tensorflow",
-                              metric="test_loss", objective="minimize")
+best_run = utils.get_best_run(project="mahjouri-saamahn/mwml-app-tensorflow", metric="test_loss", objective="minimize")
 
 # Load best run (if needed)
 best_run_dir = utils.load_run(run=best_run)
@@ -47,7 +46,7 @@ async def _index():
 
 @app.get("/experiments")
 async def _experiments():
-    return RedirectResponse("https://app.wandb.ai/mahjouri-saamahn/e2e-ml-app-tensorflow")
+    return RedirectResponse("https://app.wandb.ai/mahjouri-saamahn/mwml-app-tensorflow")
 
 
 class PredictPayload(BaseModel):

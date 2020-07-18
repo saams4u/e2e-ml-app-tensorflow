@@ -36,14 +36,14 @@ def create_dirs(dirpath):
 
 def load_json(filepath):
     """Load a json file."""
-    with open(filepath, "r", encoding="utf8") as fp:
+    with open(filepath, "r") as fp:
         json_obj = json.load(fp)
     return json_obj
 
 
 def save_dict(d, filepath):
     """Save dict to a json file."""
-    with open(filepath, 'w', encoding="utf8") as fp:
+    with open(filepath, 'w') as fp:
         json.dump(d, indent=2, sort_keys=False, fp=fp)
 
 
@@ -74,7 +74,7 @@ def construct_response(f):
 def load_glove_embeddings(embeddings_file):
     """Load embeddings from a file."""
     embeddings = {}
-    with open(embeddings_file, "r", encoding="utf8") as fp:
+    with open(embeddings_file, "r") as fp:
         for index, line in enumerate(fp):
             values = line.split()
             word = values[0]

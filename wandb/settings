@@ -1,4 +1,5 @@
 [default]
-project = e2e-ml-app-tensorflow
+project = mwml-app-tensorflow
 entity = mahjouri-saamahn
+base_url = https://api.wandb.ai
 

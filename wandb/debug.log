@@ -1,0 +1,47 @@
+2020-07-18 11:34:48,052 DEBUG   MainThread:2352 [wandb_config.py:_load_defaults():81] no defaults not found in config-defaults.yaml
+2020-07-18 11:34:48,395 DEBUG   MainThread:2352 [util.py:is_cygwin_git():314] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
+2020-07-18 11:34:48,399 DEBUG   MainThread:2352 [cmd.py:execute():719] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\mahjo\mwml-app-tensorflow, universal_newlines=False, shell=None, istream=<valid stream>)
+2020-07-18 11:34:48,458 DEBUG   MainThread:2352 [cmd.py:execute():719] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\mahjo\mwml-app-tensorflow, universal_newlines=False, shell=None, istream=None)
+2020-07-18 11:34:48,525 DEBUG   MainThread:2352 [run_manager.py:__init__():460] Initialized sync for mwml-app-tensorflow/39w860tp
+2020-07-18 11:34:48,527 DEBUG   MainThread:2352 [connectionpool.py:_new_conn():941] Starting new HTTPS connection (1): pypi.org:443
+2020-07-18 11:34:49,057 INFO    Thread-6  :2352 [run_manager.py:_on_file_created():584] file/dir created: C:\Users\mahjo\mwml-app-tensorflow\wandb\run-20200718_163448-39w860tp\wandb-metadata.json
+2020-07-18 11:34:49,119 DEBUG   MainThread:2352 [connectionpool.py:_make_request():442] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 44878
+2020-07-18 11:34:49,207 INFO    MainThread:2352 [run_manager.py:init_run():822] system metrics and metadata threads started
+2020-07-18 11:34:49,207 INFO    MainThread:2352 [run_manager.py:init_run():856] upserting run before process can begin, waiting at most 10 seconds
+2020-07-18 11:34:49,215 DEBUG   Thread-12 :2352 [connectionpool.py:_new_conn():941] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-07-18 11:34:49,377 DEBUG   Thread-12 :2352 [connectionpool.py:_make_request():442] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-07-18 11:34:49,381 INFO    Thread-12 :2352 [run_manager.py:_upsert_run():918] saving patches
+2020-07-18 11:34:49,382 DEBUG   Thread-12 :2352 [cmd.py:execute():719] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\mahjo\mwml-app-tensorflow, universal_newlines=False, shell=None, istream=None)
+2020-07-18 11:34:49,442 DEBUG   Thread-12 :2352 [cmd.py:execute():719] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\mahjo\mwml-app-tensorflow, universal_newlines=False, shell=None, istream=None)
+2020-07-18 11:34:49,503 DEBUG   Thread-12 :2352 [cmd.py:execute():719] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\mahjo\mwml-app-tensorflow, universal_newlines=False, shell=None, istream=None)
+2020-07-18 11:34:49,651 DEBUG   Thread-12 :2352 [cmd.py:execute():719] Popen(['git', 'version'], cwd=C:\Users\mahjo\mwml-app-tensorflow, universal_newlines=False, shell=None, istream=None)
+2020-07-18 11:34:49,908 DEBUG   Thread-12 :2352 [cmd.py:execute():719] Popen(['git', 'merge-base', 'HEAD', 'fdac7287b8f29383accf77c35b3b4f88499968a1'], cwd=C:\Users\mahjo\mwml-app-tensorflow, universal_newlines=False, shell=None, istream=None)
+2020-07-18 11:34:49,969 INFO    Thread-12 :2352 [run_manager.py:_upsert_run():920] saving pip packages
+2020-07-18 11:34:49,971 INFO    Thread-12 :2352 [run_manager.py:_upsert_run():922] initializing streaming files api
+2020-07-18 11:34:49,973 INFO    Thread-12 :2352 [run_manager.py:_upsert_run():929] unblocking file change observer, beginning sync with W&B servers
+2020-07-18 11:34:49,984 INFO    MainThread:2352 [run_manager.py:_sync_etc():1107] entering loop for messages from user process
+2020-07-18 11:34:50,057 INFO    Thread-6  :2352 [run_manager.py:_on_file_created():584] file/dir created: C:\Users\mahjo\mwml-app-tensorflow\wandb\run-20200718_163448-39w860tp\diff.patch
+2020-07-18 11:34:50,058 INFO    Thread-6  :2352 [run_manager.py:_on_file_created():584] file/dir created: C:\Users\mahjo\mwml-app-tensorflow\wandb\run-20200718_163448-39w860tp\requirements.txt
+2020-07-18 11:34:53,236 DEBUG   Thread-23 :2352 [connectionpool.py:_new_conn():941] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-07-18 11:34:53,390 DEBUG   Thread-23 :2352 [connectionpool.py:_make_request():442] https://api.wandb.ai:443 "POST /mahjouri-saamahn/mwml-app-tensorflow/39w860tp/file_stream HTTP/1.1" 200 None
+2020-07-18 11:34:53,987 INFO    MainThread:2352 [run_manager.py:_sync_etc():1216] closing log streams and sending exitcode to W&B
+2020-07-18 11:34:53,987 INFO    MainThread:2352 [run_manager.py:shutdown():936] shutting down system stats and metadata service
+2020-07-18 11:34:54,212 INFO    MainThread:2352 [run_manager.py:shutdown():945] stopping streaming files and file change observer
+2020-07-18 11:34:55,059 INFO    Thread-6  :2352 [run_manager.py:_on_file_modified():595] file/dir modified: C:\Users\mahjo\mwml-app-tensorflow\wandb\run-20200718_163448-39w860tp\wandb-metadata.json
+2020-07-18 11:34:55,060 INFO    MainThread:2352 [run_manager.py:_on_file_created():584] file/dir created: C:\Users\mahjo\mwml-app-tensorflow\wandb\run-20200718_163448-39w860tp\wandb-events.jsonl
+2020-07-18 11:34:55,070 DEBUG   Thread-31 :2352 [connectionpool.py:_new_conn():941] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-07-18 11:34:55,071 DEBUG   Thread-54 :2352 [connectionpool.py:_new_conn():941] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-07-18 11:34:55,071 DEBUG   Thread-62 :2352 [connectionpool.py:_new_conn():941] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-07-18 11:34:55,215 DEBUG   Thread-31 :2352 [connectionpool.py:_make_request():442] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-07-18 11:34:55,219 DEBUG   Thread-31 :2352 [connectionpool.py:_new_conn():941] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-07-18 11:34:55,228 DEBUG   Thread-54 :2352 [connectionpool.py:_make_request():442] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-07-18 11:34:55,232 DEBUG   Thread-62 :2352 [connectionpool.py:_make_request():442] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-07-18 11:34:55,234 DEBUG   Thread-54 :2352 [connectionpool.py:_new_conn():941] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-07-18 11:34:55,236 DEBUG   Thread-62 :2352 [connectionpool.py:_new_conn():941] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-07-18 11:34:55,514 DEBUG   Thread-54 :2352 [connectionpool.py:_make_request():442] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/mahjouri-saamahn/mwml-app-tensorflow/39w860tp/diff.patch?Expires=1595176495&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=CIuy8csFz19ne4W84R8jYXzEP5jMCY%2BBOxrjkrozf87RErW1XBbak%2BKN%2Bh65FvOUX4HGuq050UIYkH7BdbkaFGKXpuJysb8fLhwNMpLpq9sRDcLOTeGOQO9XftuuYffQRkaPYN1eeIogOVraOn0Qe%2FzoepLkBYOyU9KCM%2BS3NFrxKkv7aetWQeZJU2KI%2FbR5PvNK7n5iJGgzPBjJT%2BFq1eivUwzLYJmTj8SerBVB5WQavuyGKQCAVSdSnSVSziQzkFkkiyWEFvTTss8ZEBVn49CMbrNCmQ2oTyIpJjzM0UVsJHeC699Q1fIwfp4N5%2BVyG%2Bqs%2BRN2tb0CSA6SYXAgig%3D%3D HTTP/1.1" 200 0
+2020-07-18 11:34:55,516 DEBUG   Thread-62 :2352 [connectionpool.py:_make_request():442] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/mahjouri-saamahn/mwml-app-tensorflow/39w860tp/requirements.txt?Expires=1595176495&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=n%2Fjtc7mB6prZ1DfgNTCMJcMlQ0589x1pFPRF6Nz8v%2B%2FKl3m3G0DLSd8CpJL%2FctUYDrnRuUQSh0KAnI2eRHvo3XkMnAKgwk1kYdHYGc6WyhchbUJGCdgS7O%2BMHnpJ%2FrdqvaZBx7ynluYtEXq3HJ0OIV5GmSha2InYCxtyTQ1a%2BgEGP71A8nZEjWG7imh%2FZB91%2FJfmmm6zw%2BiDjUA9cQTQ4cYjmMjvhkETISboOex6FqpZrTknuAQuzNGObid9p%2F2M0qQ4CmQacLSIAt3TXJubArmhupyKCdfQbmkD5UFhJwxz%2Br%2FPTLpJsfQr2F4zp9Fj5YUQO8sjP%2FaGLA6YtRfwAg%3D%3D HTTP/1.1" 200 0
+2020-07-18 11:34:55,526 DEBUG   Thread-31 :2352 [connectionpool.py:_make_request():442] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/mahjouri-saamahn/mwml-app-tensorflow/39w860tp/wandb-metadata.json?Expires=1595176495&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=U4q0vfz24BGUiVrdnbQp2olEYYbcvfRc%2BQPTSKcEuIcHmpZGRNYkFwF%2F8HPeBHDjCpPt8Mt1MfUo6Oom2sU7R9zVxsomIynAKzgYwT8EsgEPx2x3N8b34cOlxDwvNwOzhjeS4j5ZJk65MZj2HdFTj5YK1nVPaHAr8nyAYxsxhnHkpvP%2B%2B1fpSehKvQ5lBqDNTHVVtDTGpRhybg8eCSTiadbOY5NwaNxK2ymyKJnTmPcmev91eqS4ksdLZp1vTlg3Azx1WoA9dTFAIyTOniyMnjL69Ix81Sqg%2Bc3lPHXr0%2FK3X8HzO6OwJPwfaxDNec4vGupNjXKRgcvVf8hW1wPgww%3D%3D HTTP/1.1" 200 0
+2020-07-18 11:34:56,131 DEBUG   Thread-23 :2352 [connectionpool.py:_make_request():442] https://api.wandb.ai:443 "POST /mahjouri-saamahn/mwml-app-tensorflow/39w860tp/file_stream HTTP/1.1" 200 None
+2020-07-18 11:34:56,192 DEBUG   Thread-23 :2352 [connectionpool.py:_make_request():442] https://api.wandb.ai:443 "POST /mahjouri-saamahn/mwml-app-tensorflow/39w860tp/file_stream HTTP/1.1" 200 None
+2020-07-18 11:34:56,194 INFO    MainThread:2352 [run_manager.py:_sync_etc():1228] process only ran for 9 seconds, not syncing files
+2020-07-18 11:34:56,194 INFO    MainThread:2352 [39w860tp:run_manager.py:_sync_etc():1228] process only ran for 9 seconds, not syncing files
